@@ -3,7 +3,8 @@ package com.hendisantika.rest;
 import com.hendisantika.entity.Document;
 import com.hendisantika.service.DocumentService;
 import com.hendisantika.service.ResponseMetadata;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
@@ -28,7 +29,7 @@ import java.util.List;
 @RequestMapping(value = "/doc")
 public class DocumentController {
 
-    private static final Logger LOG = Logger.getLogger(DocumentController.class);
+    private static final Logger LOG = LogManager.getLogger(DocumentController.class);
 
     @Autowired
     DocumentService documentService;

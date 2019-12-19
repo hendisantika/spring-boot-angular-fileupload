@@ -41,7 +41,7 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Override
     public byte[] getDocumentFile(Long id) {
-        return documentDao.findOne(id).getFile();
+        return documentDao.findById(id).get().getFile();
     }
 
     @Override
